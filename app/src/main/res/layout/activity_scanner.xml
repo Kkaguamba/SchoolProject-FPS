@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Scanner">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_info"
+        android:text="Press scan button to pay."
+        android:gravity="center"
+        android:textSize="32dp"
+        android:layout_marginTop="100dp"/>
+
+    <ImageView
+        android:id="@+id/arrow_img"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_info"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/baseline_arrow_downward_24" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan"
+        android:id="@+id/btn_scan"
+        android:textSize="32dp"
+        android:layout_centerInParent="true"/>
+
+
+</RelativeLayout>

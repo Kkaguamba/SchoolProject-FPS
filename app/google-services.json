@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "52732387524",
+    "project_id": "farepaymentsysapp",
+    "storage_bucket": "farepaymentsysapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52732387524:android:fe1359b597c26e07c56991",
+        "android_client_info": {
+          "package_name": "com.example.farepaymentsysapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlEUwLwO1ZofWMcTxJeJVIxDIU4PH77zc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
