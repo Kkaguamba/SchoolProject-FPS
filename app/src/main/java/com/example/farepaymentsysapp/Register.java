@@ -39,9 +39,7 @@ public class Register extends AppCompatActivity {
         myRef = db.getReference("user info");
         user = new User();
 
-
-
-       btnRegister.setOnClickListener(new View.OnClickListener() {
+        btnRegister.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
                String uName = edtuName.getText().toString();
@@ -51,20 +49,18 @@ public class Register extends AppCompatActivity {
 
                if (uName.isEmpty() || phone.isEmpty() || passwd.isEmpty() ||
                confPasswd.isEmpty()){
-                   Toast.makeText(getApplicationContext(), "please fill in the fields!",
+                   Toast.makeText(getApplicationContext(), "please fill all the fields!",
                            Toast.LENGTH_SHORT).show();
-               }
-               if (passwd.equals(confPasswd)){
-                   addNewUser(uName, phone, passwd, confPasswd);
 
+               }else if (passwd.equals(confPasswd)){
+                   addNewUser(uName, phone, passwd, confPasswd);
+                   Intent intent = new Intent(getApplicationContext(), Login.class);
+                   startActivity(intent);
                }
                else {
                    Toast.makeText(getApplicationContext(), "Password do not match!",
                            Toast.LENGTH_SHORT).show();
                }
-
-               Intent intent = new Intent(getApplicationContext(), Login.class);
-               startActivity(intent);
            }
 
        });
@@ -78,7 +74,7 @@ public class Register extends AppCompatActivity {
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                myRef.setValue(user);
+                myRef.child(phone).setValue(user);
                 Toast.makeText(getApplicationContext(), "User registered successfully",
                         Toast.LENGTH_SHORT).show();
             }
