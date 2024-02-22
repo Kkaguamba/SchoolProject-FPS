@@ -53,7 +53,7 @@ public class Register extends AppCompatActivity {
                            Toast.LENGTH_SHORT).show();
 
                }else if (passwd.equals(confPasswd)){
-                   addNewUser(uName, phone, passwd, confPasswd);
+                   addNewUser(uName, phone, passwd);
                    Intent intent = new Intent(getApplicationContext(), Login.class);
                    startActivity(intent);
                }
@@ -65,11 +65,10 @@ public class Register extends AppCompatActivity {
 
        });
     }
-    public void addNewUser(String uName, String phone, String passwd, String confPasswd){
+    public void addNewUser(String uName, String phone, String passwd){
         user.setuName(uName);
         user.setPhone(phone);
         user.setPasswd(passwd);
-        user.setConfPasswd(confPasswd);
 
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
