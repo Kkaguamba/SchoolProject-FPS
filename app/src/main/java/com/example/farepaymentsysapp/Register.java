@@ -73,9 +73,13 @@ public class Register extends AppCompatActivity {
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.hasChild(phone)){
+                    Toast.makeText(Register.this, "User already exist!",
+                            Toast.LENGTH_SHORT).show();
+                }else {
                 myRef.child(phone).setValue(user);
                 Toast.makeText(getApplicationContext(), "User registered successfully",
-                        Toast.LENGTH_SHORT).show();
+                        Toast.LENGTH_SHORT).show();}
             }
 
             @Override
