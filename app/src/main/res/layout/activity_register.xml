@@ -23,18 +23,19 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutname"
         android:layout_width="360dp"
-        android:layout_height="54dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="32dp"
         android:hint="Username"
-        app:boxBackgroundMode="filled"
+        app:boxBackgroundMode="outline"
         app:boxStrokeColor="#4CAF50"
         app:boxStrokeWidth="1dp"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
         app:hintAnimationEnabled="true"
         app:hintEnabled="true"
+        app:hintTextColor="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_register">
@@ -50,12 +51,12 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutphone"
         android:layout_width="360dp"
-        android:layout_height="96dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:hint="Phone"
-        app:boxBackgroundMode="filled"
+        app:boxBackgroundMode="outline"
         app:boxStrokeColor="#4CAF50"
         app:boxStrokeWidth="1dp"
         app:counterEnabled="true"
@@ -64,6 +65,7 @@
         app:errorEnabled="true"
         app:hintAnimationEnabled="true"
         app:hintEnabled="true"
+        app:hintTextColor="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutname">
@@ -71,19 +73,19 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/phone"
             android:layout_width="360dp"
-            android:layout_height="70dp"
+            android:layout_height="45dp"
             android:inputType="phone" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutpass"
         android:layout_width="360dp"
-        android:layout_height="85dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:hint="Password"
-        app:boxBackgroundMode="filled"
+        app:boxBackgroundMode="outline"
         app:boxStrokeColor="#4CAF50"
         app:boxStrokeWidth="1dp"
         app:counterEnabled="true"
@@ -95,6 +97,7 @@
         app:helperTextTextColor="#5CDC61"
         app:hintAnimationEnabled="true"
         app:hintEnabled="true"
+        app:hintTextColor="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutphone">
@@ -109,15 +112,17 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layoutconfpass"
         android:layout_width="360dp"
-        android:layout_height="54dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        app:boxBackgroundMode="filled"
+        android:hint="Confirm password"
+        app:boxBackgroundMode="outline"
         app:boxStrokeColor="#4CAF50"
         app:boxStrokeWidth="1dp"
         app:hintAnimationEnabled="true"
         app:hintEnabled="true"
+        app:hintTextColor="#4CAF50"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutpass">
@@ -126,7 +131,6 @@
             android:id="@+id/confpass"
             android:layout_width="360dp"
             android:layout_height="54dp"
-            android:hint="Confirm Password"
             android:inputType="text|textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
